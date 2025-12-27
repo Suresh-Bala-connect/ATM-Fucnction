@@ -95,7 +95,7 @@ function Cont({ user }) {
 
     const with_update = async (_id, data) => {
         try {
-            const result = await axios.put(`http://localhost:5018/update_Withdraw/${_id}`, data);
+            const result = await axios.put(`https://atm-fucnction-backend.onrender.com/update_Withdraw/${_id}`, data);
             if (result.data.success) {
                 alert("Updated Successfully");
 

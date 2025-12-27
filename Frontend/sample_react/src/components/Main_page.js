@@ -22,7 +22,7 @@ function Main_page() {
             return;
         }
         try {
-            const pass_res = await axios.get(`http://localhost:5018/find_pass/${getPin}`);
+            const pass_res = await axios.get(`https://atm-fucnction-backend.onrender.com/find_pass/${getPin}`);
             console.log(pass_res.data);
             
             if (pass_res.data.success) {
