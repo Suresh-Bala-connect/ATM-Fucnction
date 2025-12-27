@@ -1,0 +1,626 @@
+/* Cont.css - Premium Enhanced Version */
+
+.main_con {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 3rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg,
+      #667eea 0%,
+      #764ba2 30%,
+      #f093fb 70%,
+      #f5576c 100%);
+  border-radius: 24px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.main_con::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  animation: gradientShift 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 50%;
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 100%;
+    filter: hue-rotate(45deg);
+  }
+}
+
+.main_con::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+      #ff6b6b, #ee5a52, #ffa726, #ffca28,
+      #66bb6a, #4CAF50, #42a5f5, #2196F3);
+  border-radius: 26px;
+  z-index: -1;
+  animation: borderGlow 3s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+@keyframes borderGlow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.main_con h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  perspective: 1000px;
+}
+
+.dep_his {
+  display: flex;
+  flex-direction: column;
+  gap: 7.2rem;
+  flex: 1 1;
+  margin-top: 110px;
+}
+
+.bal_draw {
+  display: flex;
+  flex-direction: column;
+  gap: 7.2rem;
+  flex: 1 1;
+  margin-top: 110px;
+}
+
+.Data {
+  flex: 2;
+  min-height: 320px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.Data::before {
+  content: 'ATM';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  /* transition: left 0.6s ease; */
+}
+/* .Data::before {
+  content: "ATM";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 3px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+} */
+
+
+.Data:hover::before {
+  left: 100%;
+}
+
+.Data:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.Data div {
+  width: 100%;
+  text-align: center;
+}
+
+.Data h2 {
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.Data h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  border-radius: 2px;
+}
+
+.Data input {
+  width: 80%;
+  padding: 1.2rem 1.8rem;
+  margin: 1.2rem 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  font-size: 1.1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.Data input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Data input:focus {
+  outline: none;
+  border-color: rgba(76, 175, 80, 0.8);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 0 4px rgba(76, 175, 80, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+button {
+  padding: 1.2rem 2.2rem;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+      rgba(76, 175, 80, 0.9),
+      rgba(69, 160, 73, 0.9));
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
+  transition: left 0.6s ease;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(76, 175, 80, 0.3);
+  background: linear-gradient(135deg,
+      rgba(76, 175, 80, 1),
+      rgba(69, 160, 73, 1));
+}
+
+button:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.dep_his button,
+.bal_draw button {
+  width: 100%;
+  background: linear-gradient(135deg,
+      rgba(33, 150, 243, 0.9),
+      rgba(21, 101, 192, 0.9));
+}
+
+.dep_his button:hover,
+.bal_draw button:hover {
+  background: linear-gradient(135deg,
+      rgba(33, 150, 243, 1),
+      rgba(21, 101, 192, 1));
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(33, 150, 243, 0.3);
+}
+
+.main_con>button {
+  display: block;
+  margin: 2.5rem auto 0;
+  background: linear-gradient(135deg,
+      rgba(255, 107, 107, 0.9),
+      rgba(238, 90, 82, 0.9));
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.main_con>button:hover {
+  background: linear-gradient(135deg,
+      rgba(255, 107, 107, 1),
+      rgba(238, 90, 82, 1));
+  box-shadow:
+    0 15px 30px rgba(255, 107, 107, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Data button {
+  margin-top: 1.2rem;
+  background: linear-gradient(135deg,
+      rgba(255, 152, 0, 0.9),
+      rgba(245, 124, 0, 0.9));
+  padding: 1.2rem 2.5rem;
+  font-weight: 700;
+}
+
+.Data button:hover {
+  background: linear-gradient(135deg,
+      rgba(255, 152, 0, 1),
+      rgba(245, 124, 0, 1));
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(255, 152, 0, 0.3);
+}
+
+/* Balance display specific enhancement */
+.Data h2:first-child {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Input group styling */
+.Data div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Enhanced animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.Data h2,
+.Data input,
+.Data button {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.Data h2 {
+  animation-delay: 0.1s;
+}
+
+.Data input {
+  animation-delay: 0.2s;
+}
+
+.Data button {
+  animation-delay: 0.3s;
+}
+
+/* Particle effect for Data container */
+.Data::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+  animation: particleFloat 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50px, -50px) rotate(360deg);
+  }
+}
+
+/* Responsive design with enhanced breakpoints */
+@media (max-width: 1200px) {
+  .main_con {
+    margin: 2rem;
+    max-width: calc(100% - 4rem);
+  }
+}
+
+@media (max-width: 968px) {
+  .main_con {
+    margin: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .dep_his,
+  .bal_draw {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .dep_his button,
+  .bal_draw button {
+    width: 48%;
+    flex: 1;
+  }
+
+  .Data {
+    order: -1;
+    margin-bottom: 2rem;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_con {
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 20px;
+  }
+
+  .main_con h3 {
+    font-size: 2rem;
+  }
+
+  .Data {
+    padding: 2rem;
+    min-height: 250px;
+  }
+
+  .Data input {
+    width: 90%;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .main_con {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .main_con h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .dep_his,
+  .bal_draw {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dep_his button,
+  .bal_draw button {
+    width: 100%;
+  }
+
+  .Data {
+    padding: 1.5rem;
+    min-height: 220px;
+  }
+
+  .Data input {
+    width: 95%;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 1rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_con {
+    padding: 1.2rem;
+  }
+
+  .main_con h3 {
+    font-size: 1.6rem;
+  }
+
+  .Data {
+    padding: 1.2rem;
+    min-height: 200px;
+  }
+
+  .Data h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Advanced states */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  background: linear-gradient(135deg,
+      rgba(128, 128, 128, 0.6),
+      rgba(96, 96, 96, 0.6)) !important;
+}
+
+button:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+  box-shadow:
+    0 0 0 4px rgba(76, 175, 80, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom scrollbar enhancement */
+.Data {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.Data::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Data::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.Data::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.Data::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Print styles */
+@media print {
+  .main_con {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .main_con {
+    background: #000;
+    border: 2px solid #fff;
+  }
+
+  .Data {
+    background: #000;
+    border: 1px solid #fff;
+  }
+
+  button {
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
